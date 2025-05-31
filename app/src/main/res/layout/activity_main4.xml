@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5BEFF"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity5">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="экран участника"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="62dp"
+
+        android:textStyle="bold" />
+
+    <Button
+        android:background="@drawable/roundstyle"
+        android:padding="10dp"
+        android:backgroundTint="@android:color/holo_purple"
+        android:id="@+id/butten_teacher2"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+
+        android:text="Приду"
+
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="226dp"></Button>
+
+    <Button
+        android:background="@drawable/roundstyle"
+        android:padding="10dp"
+        android:id="@+id/butten_teacher3"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Не приду"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="296dp"></Button>
+</LinearLayout>

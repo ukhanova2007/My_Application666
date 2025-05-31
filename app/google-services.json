@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "511270109775",
+    "project_id": "meeting-f4eea",
+    "storage_bucket": "meeting-f4eea.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511270109775:android:1badbd3de40bd889c3603a",
+        "android_client_info": {
+          "package_name": "com.example.myapplication666"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6RWAu-_-ApeMnsuzC5wywWIbMd6lzTnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

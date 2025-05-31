@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9DFF0"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="0dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Главный экран"
+            android:textSize="24sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+        android:padding="8dp" />
+        <EditText
+            android:id="@+id/myE0ditTe0xt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/myEditText"
+            android:layout_alignBottom="@+id/myEditText"
+            android:layout_marginEnd="-3dp"
+            android:layout_marginBottom="135dp"
+            android:hint="Введите фамилию"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"></EditText>
+
+        <EditText
+            android:id="@+id/myE0ditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/myEditText"
+            android:layout_alignBottom="@+id/myEditText"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="71dp"
+            android:hint="Введите имя"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"></EditText>
+
+        <EditText
+            android:id="@+id/myEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="Введите отчество"></EditText>
+
+        <Button
+            android:background="@drawable/roundstyle"
+            android:padding="10dp"
+            android:id="@+id/butten_student"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="140dp"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:text="УЧАСТНИК"></Button>
+
+        <Button
+            android:background="@drawable/roundstyle"
+            android:padding="10dp"
+            android:id="@+id/butten_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="209dp"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:text="ОРГАНИЗАТОР"></Button>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
