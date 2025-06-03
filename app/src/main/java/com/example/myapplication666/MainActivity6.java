@@ -36,12 +36,24 @@ public class MainActivity6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
 
-        Calendar calendar = Calendar.getInstance();
+      /*  Calendar calendar = Calendar.getInstance();
         Date currentDate = calendar.getTime();
-        calendar.add(Calendar.DAY_OF_MONTH, 1);
+        calendar.add(Calendar.DAY_OF_YEAR, 1);
         Date nextDay = calendar.getTime();
-        calendar.add(Calendar.DAY_OF_MONTH, 1);
-        Date nextnextDay = calendar.getTime();
+        calendar.add(Calendar.DAY_OF_YEAR, 1);
+        Date nextnextDay = calendar.getTime();*/
+
+        Calendar calendar1 = Calendar.getInstance(); // Новый экземпляр
+        Date currentDate = calendar1.getTime();
+
+        Calendar calendar2 = Calendar.getInstance(); // Новый экземпляр
+        calendar2.add(Calendar.DAY_OF_YEAR, 1);
+        Date nextDay = calendar2.getTime();
+
+        Calendar calendar3 = Calendar.getInstance(); // Новый экземпляр
+        calendar3.add(Calendar.DAY_OF_YEAR, 2);
+        Date nextnextDay = calendar3.getTime();
+
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         String formattedCurrentDay;
@@ -49,7 +61,7 @@ public class MainActivity6 extends AppCompatActivity {
         // Инициализация Firestore
         db = FirebaseFirestore.getInstance();
 
-        Intent intent = getIntent();
+         Intent intent = getIntent();
         int receivedIntValue = intent.getIntExtra("my_integer_value", 1);
         formattedCurrentDay = sdf.format(currentDate);
         if(receivedIntValue == 2) {
@@ -58,14 +70,20 @@ public class MainActivity6 extends AppCompatActivity {
             formattedCurrentDay = sdf.format(nextnextDay);
         }
 
+
+
+
         String name_o = getIntent().getStringExtra("name_o");
         String surname_o = getIntent().getStringExtra("surname_o");
         String name3_o = getIntent().getStringExtra("name3_o");
 
         // Получаем ссылку на коллекцию "house3" с нужной датой
-        Query query = db.collection("house3").whereEqualTo("currentDateAndTime", formattedCurrentDay)
-                .whereEqualTo("name_o", name_o).whereEqualTo("name3_o", name3_o)
-                .whereEqualTo("surname_o", surname_o);
+        Query query = db.collection("house3")
+                .whereEqualTo("currentDateAndTime", formattedCurrentDay)
+                  .whereEqualTo("name_o", name_o)
+                .whereEqualTo("name3_o", name3_o)
+                .whereEqualTo("surname_o", surname_o)
+                .whereEqualTo("fl", true);
 
         // Инициализация RecyclerView
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

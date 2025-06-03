@@ -24,7 +24,7 @@ public class MainActivity3 extends AppCompatActivity {
         String name_o = getIntent().getStringExtra("name_o");
         String surname_o = getIntent().getStringExtra("surname_o");
         String name3_o = getIntent().getStringExtra("name3_o");
-        String newText = name_o + " " + surname_o + " " + name3_o;
+        String newText = surname_o + " " + name_o + " " + name3_o;
         textView.setText(newText);
 
         next_button = findViewById(R.id.butten_teacher4);
